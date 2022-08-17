@@ -1,0 +1,20 @@
+
+class Grocery():
+    Exp_year = 2023
+    def __init__(self,Name,quantity,price):
+        self.Name = Name
+        self.quantity = quantity
+        self.price = price
+        
+    def address(self):
+        add = f"Name:{self.Name}\nQuantity:{self.quantity}\nPrice:{self.price}"
+        return add
+        
+item1 = Grocery("Rice",'50 kg',2000)
+item2 = Grocery("Dhal",'25 kg',975)
+item3 = Grocery("Tea","100 g",20)
+
+print("Exp_year :",Grocery.Exp_year)
+print(item1.address())
+print(item2.address())
+print(item3.address())
