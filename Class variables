@@ -1,0 +1,32 @@
+from datetime import date
+class Student:
+    fees = 23495
+    def __init__(self, name, city, dob, rollno):
+        self.name = name
+        self.rollno = rollno
+        self.dob = dob
+        self.city = city
+    
+    def datas(self):
+        dat = f"Name :{self.name}\nRollno :{self.rollno}\nCity :{self.city}\nDob :{self.dob}\n\n"
+        return dat
+        
+    def age(self):
+        cur_year = date.today().year
+        return cur_year - self.dob
+        
+    def pay_fees(self,amount):
+        self.fees = self.fees - amount
+        
+stu1 = Student('Ram',"Delhi",2002,34)
+stu2 = Student('Mahesh',"Patna",2003,21)
+    
+stu1.pay_fees(3672)
+
+print("Balance Amount :",stu1.fees)
+print("AGE of Stud1 : ",stu1.age())
+print("AGE of Stud2 : ",stu2.age())
+print(stu1.datas())
+print(stu2.datas())
+        
+        
